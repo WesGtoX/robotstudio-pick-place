@@ -1,0 +1,56 @@
+MODULE Module1
+    CONST robtarget RED_UP_2:=[[-75,500,270],[0,0.707106781,0.707106781,0],[-2,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget RED_DOWN_2:=[[-75,500,250],[0,0.707106781,0.707106781,0],[-2,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ROTATE_2:=[[500,1000,270],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget RED_UP_FINAL_2:=[[-75,1500,270],[0,-0.707106781,0.707106781,0],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget RED_DOWN_FINAL_2:=[[-75,1500,250],[0,-0.707106781,0.707106781,0],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget HOME_2:=[[547.330665099,1000,451.64730631],[0.190808996,0,0.981627183,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget GREEN_UP_2:=[[-25,500,270],[0,0.707106781,0.707106781,0],[-2,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget GREEN_DOWN_2:=[[-25,500,250],[0,0.707106781,0.707106781,0],[-2,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget GREEN_UP_FINAL_2:=[[-25,1500,270],[0,-0.707106781,0.707106781,0],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget GREEN_DOWN_FINAL_2:=[[-25,1500,250],[0,-0.707106781,0.707106781,0],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget BLUE_UP_2:=[[25,500,270],[0,0.707106781,0.707106781,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget BLUE_DOWN_2:=[[25,500,250],[0,0.707106781,0.707106781,0],[-1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget BLUE_UP_FINAL_2:=[[25,1500,270],[0,-0.707106781,0.707106781,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget BLUE_DOWN_FINAL_2:=[[25,1500,250],[0,-0.707106781,0.707106781,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget YELLOW_UP_2:=[[75,500,270],[0,0.707106781,0.707106781,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget YELLOW_DOWN_2:=[[75,500,250],[0,0.707106781,0.707106781,0],[-1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget YELLOW_UP_FINAL_2:=[[75,1500,270],[0,-0.707106781,0.707106781,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget YELLOW_DOWN_FINAL_2:=[[75,1500,250],[0,-0.707106781,0.707106781,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    PROC Path_10()
+        WaitTime 3;
+        MoveJ RED_UP_2,v1000,fine,MyTool\WObj:=wobj0;
+        MoveL RED_DOWN_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL RED_UP_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveC ROTATE_2,RED_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL RED_DOWN_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL RED_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveJ HOME_2,v1000,fine,MyTool\WObj:=wobj0;
+
+        WaitTime 3;
+        MoveJ GREEN_UP_2,v1000,fine,MyTool\WObj:=wobj0;
+        MoveL GREEN_DOWN_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL GREEN_UP_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveC ROTATE_2,GREEN_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL GREEN_DOWN_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL GREEN_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveJ HOME_2,v1000,fine,MyTool\WObj:=wobj0;
+
+        WaitTime 3;
+        MoveJ BLUE_UP_2,v1000,fine,MyTool\WObj:=wobj0;
+        MoveL BLUE_DOWN_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL BLUE_UP_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveC ROTATE_2,BLUE_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL BLUE_DOWN_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveJ BLUE_UP_FINAL_2,v1000,fine,MyTool\WObj:=wobj0;
+
+        WaitTime 3;
+        MoveJ YELLOW_UP_2,v1000,fine,MyTool\WObj:=wobj0;
+        MoveL YELLOW_DOWN_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL YELLOW_UP_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveC ROTATE_2,YELLOW_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL YELLOW_DOWN_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL YELLOW_UP_FINAL_2,v1000,z100,MyTool\WObj:=wobj0;
+        MoveJ HOME_2,v1000,fine,MyTool\WObj:=wobj0;
+    ENDPROC
+ENDMODULE
